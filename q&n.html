@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+        margin:0 auto;
+        background-color: yellow;
+        border:2px solid green;
+        width:50%;
+        
+        }h1{
+            text-decoration: underline;
+            color:red;
+            background-color: aliceblue;
+        }td{
+            font-size:20px;
+            color: darkblue;
+            
+        }tr:nth-child(odd){
+            background-color: yellowgreen;
+        }
+        th, tr, td{
+            border:1px solid green;
+        }p{
+            font-size: 23px;
+            color:blue;
+            position:relative;
+            text-align: justify;
+            
+        }.myhead{
+            text-decoration: none;
+            color: black;
+        }.myspan{
+            border:2px solid black;
+        }.mydiv{
+            border:2px solid black;
+            width:20%;
+            font-size: 21px;
+            color: blue;
+        }body{
+            background-color:bisque;
+        }
+        li{
+           list-style-type: decimal; 
+        }.one{
+            color:black;
+            text-decoration: none;
+        }
+        .one,.two,.three,.four,.five,.six{
+            line-height: 0px;
+        }.answer{
+            font-size: 30px;
+            text-decoration: underline;
+            color:darkblue;
+            text-align: center;
+            text-shadow: 2px 1px 1px gray;
+            position: relative;
+            left:45%;
+        }
+           
+        
+    </style>
+</head>
+<body>
+    <b Class="answer">ANSWERS</b>
+     <ol>
+    <h1><li>Div vs Span:</li></h1>
+    <table width="50%">
+       <tr><th>&ltdiv&gt</th>
+        <th> &ltspan&gt</th></tr>
+        <tr>
+            <td>Div is block level element in HTML.</td>
+            <td>Span is in-line element.</td>
+        </tr>
+        <tr>
+            <td>It divisions a large amount of elements of a web page.</td>
+            <td>Span tag works with particular element from a web page. </td>
+        </tr>
+        <tr>
+            <td>Div tag accepts <b>allign attribute</b> to align the content.</td>
+            <td>Span tag doesn't accept align attribute. </td>
+        </tr>
+        <tr>
+            <td>e.g. <br> &ltdiv class="main"&gt <br> &ltdiv&gt.....
+            &lt/div&gt <br> &lth1&gt..........&lt/h1&gt <br> &lt/div&gt </td>
+            <td>e.g <br> India is &ltspan style="color:red;"&gt great &lt/span&gt</td>
+        </tr>
+        
+    </table>
+<h1><li>Class vs ID:</li></h1>
+    <table>
+        <th>Class</th>
+        <th>ID</th>
+        <tr> <td>Class is represnted by '.' symbol in CSS.</td>
+            <td>Id is represented by '#" symbol in CSS.</td>
+        </tr>
+        <tr>
+            <td>More than one class can be used within the starting tag.</td>
+            <td>Only single id is used </td>
+        </tr>
+        <tr>
+            <td>The priority of Class is lesser than ID</td>
+            <td>But the priority of ID is greater than Class</td>
+        </tr>
+        <tr>
+            <td><b>Syntax:</b> <br> <pre>.Class name{
+    /*body of Class*/
+}</pre>
+            </td>
+            <td><b>Syntax:</b><br> <pre>#ID name{
+    /*body of ID*/
+}</pre>
+            </td>
+        </tr>
+    </table>
+    <h1><li>Self Closing Tags:</li></h1>
+    <p> The tags which have only opening tag but not having any closing tag is called <b>Self Closing Tag.</b> in HTML<br>e.g. &nbsp&lthr&gt, &ltimg&gt, &ltbr&gt, &ltinput&gt etc.</p>
+ <h1 class="myh1"><li>Heading Tags:</li></h1>
+<p>There are 6 heading tags are existed in HTML. h1,h2....h6. where h1 is biggest and h6 is smallest. <br> 
+<b> <h1 class="one">&lth1&gt This is heading 1&lt/h1&gt</h1> <br>
+    <h2 class="two"> &lth2&gt This is heading 2&lt/h2&gt</h2> <br>
+    <h3 class="three"> &lth3&gt This is heading 3&lt/h3&gt</h3> <br>
+    <h4 class="four">&lth4&gt This is heading 4&lt/h4&gt</h4> <br>
+    <h5 class="five">&lth5&gt This is heading 5&lt/h5&gt</h5> <br>
+    <h6 class="six">&lth6&gt This is heading 6&lt/h6&gt</h6>
+   </b></p>
+ <h1> <li> Difference b/w Block and Inline:</li></h1>
+   <table>
+    <tr>
+        <th>Block</th>
+        <th>Inline</th>
+    </tr>
+    <tr>
+        <td>Block elements always occupy 100% width and extra spaces.</td>
+        <td> Inline elements only occupy the width as per own width it does not takes extra spaces.</td>
+    </tr>
+    <tr>
+        <td>Block elements start with new line everytime.</td>
+        <td>Inline elements avoid new line untill one line becomes end.</td></tr>
+        <tr><td>Most used block elements are h1, h2, h3....h6, div, p, ol, li, ul, etc.</td>
+        <td>img, input, &ltb&gt, &tha&gt, span, br, etc.are the best example of Inline element too.</td>
+    </tr>
+   </table>
+   <h1> <li>Differnce between &ltem&gt and &ltstrong&gt:</li></h1>
+   <table>
+   <tr>
+    <th>em</th>
+    <th>Strong</th>
+   </tr>
+   <tr>
+    <td>To make the text with Italic format, we use emphasis tag. </td>
+    <td>To make the text as bolder we use strong tag instead of &ltb&gt tag.</td>
+   </tr>
+   <tr>
+    <td>e.g. <br> &ltem&gtI love my India&lt/em&gt</td>
+    <td>e.g. <br> &ltstrong&gtI love my India&lt/strong&gt</td>
+   </tr>
+</table>
+<h1><li>Attributes in HTML:</li></h1>
+<p>Attributes are the special properties/features of html tags. Using these attributes,we can change the content's characteristics especially. <br>
+example, for &ltimg&gt tag having few attributes like <b>alt, height, width</b> etc. These are mainly used to define the characteristics/properties of Image.</p>
+<h1><li>HTML Tags vs HTML Elements:</li></h1>
+<table>
+    <tr>
+        <th>HTML Tags</th>
+        <th>HTML Elements</th>
+    </tr>
+    <tr>
+        <td>HTML tags start with '<' and ends with '>' this symbol</td>
+        <td>Whatever written within the html tags are HTML elements </td>
+        
+    </tr>
+    <tr>
+        <td>HTML tags are used to hold the HTML element.</td>
+        <td>HTML element holds the content.</td>
+    </tr>
+    <tr>
+        <td>e.g. &ltb&gt &lt/b&gt</td>
+        <td> e.g. &ltb&gtThis is the content.&lt/b&gt </td>
+    </tr>
+</table>
+<h1><li>All about &ltbr&gt tag:</li></h1>
+<p>This is the special tag that is used most of cases to make a new line. Break tag basically indicates the ending of any line but beginning of new line. this is not Block level element. It is also a <b>Inline element</b>. In single word, it makes line break. <br> <br>
+e.g.<span class="myspan"> First Line &ltbr&gt Second Line &ltbr&gt Third line&ltbr&gt</span>
+<div class="mydiv">First Line <br> Second Line <br> Third Line</div></p> 
+<h1><li>Sementic Elements:</li></h1>
+<p>A semantic element clearly describes its meaning to both the browser and the developer.
+
+   <br> Examples of non-semantic elements: &ltdiv&gt and &ltspan&gt - Tells nothing about its content.
+    
+   <br> Examples of semantic elements: &ltform&gt, &lttable&gt, and &ltarticle&gt - Clearly defines its content.</p>
+</ol>
+</body>
+</html>
