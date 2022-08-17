@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex{
+            display:flex;
+            background-color: yellow;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+        }
+        .flex>div{
+            height:300px;
+            width:200px;
+            background-color:green;
+            margin: 20px;
+            color:whitesmoke;
+            font-size: 30px;
+           
+
+        }
+        .tran{
+            height:100px;
+            width:300px;
+            background-color: aqua;
+            border:2px solid green;
+            transition-property: height, background-color, border;
+            transition-delay: 0s;
+            transition-duration: 2s;
+            position: relative;
+            left:30%;
+        }.tran:hover{
+            height:550px;
+            background-color: deeppink;
+            border:4px solid black;
+
+        }
+        .transformation{
+            height:300px;
+            width:200px;
+            background-color: green;
+            transition: transform 2s;
+            position: relative;
+            top:40px;
+            left:40%;
+
+
+        }.transformation:hover{
+            transform: rotate(360deg);
+        }
+        .grid{
+            display:grid;
+            grid-template-columns: auto auto auto auto;
+            position: relative;
+            top:60px;
+          }
+          .grid>div{
+             background-color: aqua;
+             border:1px solid red;
+             padding:20px;
+             margin:0px;
+            
+          }.one{
+            grid-column: 1/span 4;
+            
+          
+          }.seven{
+              grid-row:7/3;
+          }.heading1{
+            position: relative;
+            top:50px;
+          }#mybold{
+            position: relative;
+            top:40px;
+            font-size: 20px;
+          }.morning{
+            position: relative;
+            top:40px;
+            font-weight: bold;
+            color:blue;
+          }
+          .noon{
+            position: relative;
+            top:40px;
+            font-weight: bold;
+            color:blue;
+          }
+          .afternoon{
+            position: relative;
+            top:40px;
+            font-weight: bold;
+            color:blue;
+          }.second{
+            position: relative;
+            top:40px;
+          }
+          
+          #para1:hover{
+               color:red;
+               
+          }input:focus{
+             background-color:green;
+          }
+           tr:nth-child(odd){
+            background-color: yellow;
+            font-size:18px;
+            font-weight: bold;
+          }
+           div i:first-child{
+            background-color: yellow;
+            font-size:18px;
+            font-weight: bold;
+          }
+          div b:last-child{
+            background-color: yellow;
+            font-size:18px;
+            font-weight: bold;
+          }
+  
+    </style>
+</head>
+<body>
+    <ol start="11">
+       <h1> <li><u>Flex Implementation: </u></li></h1>
+       <div class="flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+       </div>
+
+       <h1><li>Implementation of Transition:</li></h1>
+       <div class="tran">
+   
+       </div>
+
+       <h1><li>Implementation of Transformation:</li></h1>
+       <div class="transformation"></div>
+
+       <h1> <li>Grid Representation:</li></h1>
+       <div class="grid">
+       <div class="one">1</div>
+       <div>2</div>
+       <div>3</div>
+       <div>4</div>
+       <div>5</div>
+       <div>6</div>
+       <div class="seven">7</div>
+       <div>8</div>
+       <div>9</div>
+       <div>10</div>
+       <div>11</div>
+       <div>12</div>
+       <div>13</div>
+       <div>14</div>
+       <div>15</div>
+       <div>16</div>
+   </div>
+   <h1 class="heading1"><li>CSS Combinators:</li></h1>
+   
+   <b id="mybold"> there are four different Combinators in CSS are:
+      <ul>
+        <li>Descendant Selector(Space) </li>
+        <li>Child Selector(>)</li>
+        <li>Adjacent Sibling Selector(+)</li>
+        <li>General Sibling Selector(~)</li>
+    </ul></b>
+    <ul>
+       <div class="morning"> <li> <h3>Descendant Selector:</h3></li>
+         <pre>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &ltstyle&gt 
+                .first p{  
+                    color:red;
+                    background-color: blue;
+                }
+            &lt/style&gt
+        &ltdiv class="first"&gt
+            &ltp&gtLorem ipsum dolor sit amet consectetur adipisicing elit. Odit, officia.&lt/p&gt
+            &ltP&gtLorem ipsum dolor sit amet consectetur adipisicing elit. Natus, dicta?&lt/P&gt        
+        &lt/div&gt</pre> 
+
+        <div class="evening"> <li> <h3>Child Selector:</h3></li>
+            <pre>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &ltstyle&gt 
+                   .first > p{  
+                       background-color: blue;
+                   }
+               &lt/style&gt
+           &ltdiv class="first"&gt
+               &ltp&gtLorem ipsum dolor sit amet consectetur adipisicing elit. Odit, officia.&lt/p&gt
+               &ltP&gtLorem ipsum dolor sit amet consectetur adipisicing elit. Natus, dicta?&lt/P&gt        
+           &lt/div&gt</pre> 
+    </div>
+    <div class="noon"> <li> <h3>Adj. Sibling Selector:</h3></li>
+        <pre>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &ltstyle&gt 
+               .first + p{  
+                   background-color: blue;
+               }
+           &lt/style&gt
+       &ltdiv class="first"&gt
+           &ltp&gtLorem ipsum dolor sit amet consectetur adipisicing elit. Odit, officia.&lt/p&gt
+           &ltP&gtLorem ipsum dolor sit amet consectetur adipisicing elit. Natus, dicta?&lt/P&gt        
+       &lt/div&gt
+    &ltp&gt Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, quis!&lt&gt</pre> 
+</div>
+<div class="afternoon"> <li> <h3>General Sibling Selector:</h3></li>
+    <pre>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &ltstyle&gt 
+           .first ~ p{  
+               background-color: blue;
+           }
+       &lt/style&gt
+   &ltdiv class="first"&gt
+       &ltp&gtLorem ipsum dolor sit amet consectetur adipisicing elit. Odit, officia.&lt/p&gt
+       &ltP&gtLorem ipsum dolor sit amet consectetur adipisicing elit. Natus, dicta?&lt/P&gt        
+   &lt/div&gt
+&ltp&gt Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, quis!&lt&gt
+&ltp&gt Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, saepe!&ltp&gt
+</pre> 
+</div>   
+    </ul>
+
+    <h1 class="heading1"><li>Pseudo Selectors:</li></h1>
+   
+    <b id="mybold"> there are different Pseudo Selectors in CSS are:
+       <ul>
+         <li>Hover </li>
+         <li>focus</li>
+         <li>n-th Child</li>
+         <li>First Child</li>
+         <li>Last Child</li>
+     </ul></b>
+<ul>
+   <div class="second">
+     <ul> <li> <h3>Hover:</h3></li>
+    <p id="para1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, eaque?</p>
+    <li> <h3>focus:</h3></li>
+    NAME:<input type="text" name="input1">
+    <li> <h3>n-th child:</h3></li>
+  <table border="2" cellpadding="10px">
+    <tr>
+        <td>name</td>
+        <td>rool</td>
+        <td>marks</td>
+    </tr>
+    <tr>
+        <td>Rahul</td>
+        <td>02</td>
+        <td>322</td>
+    </tr>
+    <tr>
+        <td>amal</td>
+        <td>03</td>
+        <td>766</td>
+    </tr>
+    <tr>
+        <td>anail</td>
+        <td>04</td>
+        <td>428</td>
+    </tr>
+  </table>
+  <li> <h3>first child:</h3></li>
+ <div> <i>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, iusto!</i>
+  <i>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, eligendi.</i>
+  <i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, ipsum.</i>
+</div>
+<li> <h3>last child:</h3></li>
+<div> <b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos, iusto!</b>
+ <b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, eligendi.</b>
+ <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, ipsum.</b>
+</div></ul>
+
+</div>  </ol>
+</body>
+</html>
