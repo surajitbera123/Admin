@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0auto;
+            padding:0px;
+            box-sizing: border-box;
+        }.clock-image{
+            height:100px;
+            position: relative;
+            left:90px;
+            top:30px;
+        }.menu{
+          background-color: aliceblue;
+          width:20%;
+          border-radius: 10px;
+          position: relative;
+          left:90px;
+          top:60px;
+        }.menu ul{
+
+        }.menu ul li{
+          list-style: none;
+          display: inline-block;
+          margin:20px;
+          
+        }.door{
+            float:right;
+            position: relative;
+            right:130px;
+            top:-170px;
+        }.flex{
+          display:flex;
+          background-color:aliceblue;
+          width:38%;
+          flex-direction: row;
+          position: relative;
+          top:50px;
+          border-radius: 10px;
+          position: relative;
+          top:108px;
+          left:90px;
+        }.flex>div{
+            background-color:wheat;
+            margin:10px;
+            font-size: 30px;
+            padding:8px;
+            border-radius: 5px;
+            height:80px;
+            font-weight: bold;
+        }.background{
+            width:25%;
+            height:70px;
+            background-color:white;
+            position: relative;
+            top:50px;
+            left:180px;
+            border-radius: 20px;
+            box-shadow: 9px 9px 2px gray;
+            opacity:0.6;
+            z-index:-1;
+        }.time {
+          background-color: aliceblue;
+          border-radius: 10px;
+          position: relative;
+          width:18%;
+          top:90px;
+          left:90px;
+         
+        }.time ul{
+         position: relative;
+         left:20px;
+        }.time ul li{
+            list-style: none;
+            line-height: 2;
+            
+            
+        }.myimg1{
+         float:right;
+         box-sizing: border-box;
+         position: relative;
+         left:410px;
+         top:-130px;
+        }.list>div{
+            background-color: bisque;
+            margin:20px;
+            width:25%;
+            padding:10px;
+            border-radius: 2px;
+            color:deeppink;
+        }.list{
+            position: relative;
+            top:140px;
+            left:70px;
+        }.teacup{
+            float:right;
+            position: relative;
+            right:125px;
+            top:-100px;
+        }.sleeping{
+            float:right;
+            position: relative;
+            left:410px;
+            top:270px;
+        }
+    </style>
+</head>
+<body bgcolor="#3d087b">
+    <img src="clock.png" alt="" class="clock-image">
+    <div class="menu">
+        <ul>
+            <li><img src="sun.png" alt=""></li>
+            <li><img src="lunch_time.svg" alt=""></li>
+            <li><img src="nap_time.svg" alt=""></li>
+        </ul>
+    </div>
+    <img src="door.svg" alt=""class="door">
+    <div class="flex">
+        <div style="background-color:unset; position:relative; top:13px;">TIME</div>
+        <div style="color:rgb(170, 8, 170);font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">10<br>Hrs</div><b style="font-size:40px;position:relative;top:23px;">:</b>
+        <div style="color:rgb(150, 6, 150);font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">45<br>Mins</div><b style="font-size:40px;position:relative;top:23px;">:</b>
+        <div style="color:rgb(172, 3, 172);font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">01<br>Secs</div>
+        <div style="position:relative; background-image:linear-gradient(to top, blue,magenta); color:white;"><p style="position:relative;bottom:15px;">AM</p></div>
+    </div>
+    <div class="background">
+    </div>
+    <div class="time">
+        <ul>
+            <li>8AM-9AM</li>
+            <li>9AM-10AM</li>
+            <li>10AM-11AM</li>
+            <li>11AM-12PM</li>
+        </ul>
+    </div>
+    <img src="meeting.svg" alt="" class="myimg1">
+   <div class="list">
+    <div class="one">8AM-9AM</div>
+    <div class="one">9AM-10AM</div>
+    <div class="one">10AM-11AM</div>
+    <div class="one">11AM-12AM</div>
+</div>
+<img src="teacup.png" alt="" class="teacup">
+<img src="sleeping.svg" alt=""class="sleeping">
+</body>
+</html>
