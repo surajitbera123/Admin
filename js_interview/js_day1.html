@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       h1{
+        color:red;
+        background-color: wheat;
+       }
+       p{
+        color:blue;
+        font-size: 20px;
+       }
+       pre{
+        color:green;
+        font-size: 18px;
+       }
+       ul li{
+        color:blue;
+        font-size: 20px;
+       }
+    </style>
+</head>
+<body>
+<h1 style="text-align:center;">JS-Interview Preparation:(Day-1)</h1>
+<ol>
+    <h1><li>Difference b/w '==' and ''===' operation</li></h1>
+    <p>The ‘==’ operator tests for abstract equality i.e. it does the necessary type conversions before doing the equality comparison.
+        But the ‘===’ operator tests for strict equality i.e it will not do the type conversion hence if the two values are not of the same type, when compared, it will return false.</p>
+<pre> // In R.H.S. string "9" is converted into
+    // number 9, hence returns true.
+    document.write(9 == "9"); //true
+      
+    // used for next line
+    document.write(' ')
+   
+    // Here no type conversion takes place,
+    // hence returns false
+    document.write(9 === "9");//false </pre>
+
+    <h1><li>Spread Operator</li></h1>
+    <p>Spread operator allows an iterable to expand in places where 0+ arguments are expected. It is mostly used in the variable array where there is more than 1 values are expected. It allows us the privilege to obtain a list of parameters from an array. Syntax of Spread operator is same as Rest parameter but it works completely opposite of it.</p>
+    <pre>let arr = [1,2,3];
+        let arr2 = [4,5];
+          
+        arr = arr.concat(arr2);
+          
+        console.log(arr); // [ 1, 2, 3, 4, 5 ]</pre>
+
+        <h1><li>Difference between Let/Var/Const</li></h1>
+        <p>
+            <ul><li>Var:-The variables which are declared by var keyword are in function scope. And it is redeclarable and remodifyable</li>
+                <li>Let:- The variables which are declared by let keyword are in global scope. And it is not re-declared but re-updateable </li>
+                <li>Const:- The variables which are declared by const keyword are in global scope. And it is neither re-declared nor re-updateable</li>
+        </ul>
+        </p>
+
+       <h1><li>Execution Context:</li></h1> 
+        <p>The Execution Context contains the code that's currently running, and everything that aids in its execution. During the Execution Context run-time, the specific code gets parsed by a parser, the variables and functions are stored in memory, executable byte-code gets generated, and the code gets executed.</p>
+      <h1><li>First Class Function:</li></h1>
+      <p> A programming language is said to have First-class functions if functions in that language are treated like other variables. So the functions can be assigned to any other variable or passed as an argument or can be returned by another function.</p>
+      <pre>
+        var fun=function(){
+            console.log("It is First Class Function");//It is First Class Function.
+        }
+        fun();
+      </pre>
+      <h1><li>Closures:</li></h1>
+      <p>A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.</p>
+    
+    <pre>function init() {
+        var name = 'Mozilla'; // name is a local variable created by init
+        function displayName() {
+          // displayName() is the inner function, a closure
+          console.log(name); // use variable declared in the parent function
+        }
+        displayName();
+      }
+      init();</pre>
+      
+      <h1><li>call(), apply(), bind() method in Java Script</li></h1>
+      <p> call():-Call() also accepts a comma-separated list of arguments. The general syntax for this is function.call(this, arg1, arg2, ...)</p>
+    <pre>function greet(greeting) {
+      console.log(`${greeting}, I am ${this.name} and I am ${this.age} years old`);
+    }
+    const john = {
+      name: 'John',
+      age: 24,
+    };
+    const jane = {
+      name: 'Jane',
+      age: 22,
+    };
+    // Hi, I am John and I am 24 years old
+    greet.call(john, 'Hi');
+    // Hi, I am Jane and I am 22 years old
+    greet.call(jane, 'Hello');</pre>
+
+<p>apply():The apply() method is similar to call(). The difference is that the apply() method accepts an array of arguments instead of comma separated values.</p>
+<br>Syntax: function greet(greeting, lang) {
+  console.log(lang);
+  console.log(`${greeting}, I am ${this.name} and I am ${this.age} years old`);
+}
+const john = {
+  name: 'John',
+  age: 24,
+};
+const jane = {
+  name: 'Jane',
+  age: 22,
+};
+// Hi, I am John and I am 24 years old
+greet.apply(john, ['Hi', 'en']);
+// Hi, I am Jane and I am 22 years old
+greet.apply(jane, ['Hola', 'es']);:
+function.apply(thisArg, [argumentsArr]);
+<p>Bind():-We can also pass extra arguments to the bind method. The general syntax for this is function.bind(this, arg1, arg2, ...). For example:</p>
+<pre>function greeting(lang) {
+  console.log(`${lang}: I am ${this.name}`);
+}
+const john = {
+  name: 'John'
+};
+const jane = {
+  name: 'Jane'
+};
+const greetingJohn = greeting.bind(john, 'en');
+greetingJohn();
+const greetingJane = greeting.bind(jane, 'es');
+greetingJane();
+</pre>
+    </ol>
+</body>
+</html>

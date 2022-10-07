@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: wheat;
+            color:red;
+        }
+        p{
+            color:blue;
+            font-size: 17px;
+        }pre{
+            color:green;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">JS-Interview Preparation(Day-2)
+    </h1>
+<ol><h1><li>
+    Creation Phase and Execution Phase:
+</li></h1>
+<p>
+    <ul>
+        <li>Creation Phase:Compiler runs through the entire code for 2 time before actually executing the code,
+
+            In the first run, It picks all function declarations and stores them in memory with their reference.
+            In the second run, It picks all variables and assign undefined to them. In the event of a conflict between variable and function declaration name then that variable is ignored.</li>
+      <li>Execution Phase:
+
+        Variables assigned with values
+        Functions executed
+        With above formula, I’ve arrived at a pictorial representation of the above code execution,</li>
+    
+        </ul>
+</p>
+
+<h1><li>Objects in Java Script</li></h1>
+<ul><li>Date()</li>
+<li>Number()</li>
+<li>String()</li>
+<li>Set()</li>
+<li>Map()</li>
+<li>Bollean</li>
+
+</ul>
+<h1><li>Function construtor</li></h1>
+<p>The Function() constructor creates a new Function object. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues as eval(). However, unlike eval (which may have access to the local scope), the Function constructor creates functions which execute in the global scope only.</p>
+<pre>const sum = new Function('a', 'b', 'return a + b');
+
+    console.log(sum(2, 6));
+    // expected output: 8
+    </pre>
+    <h1><li>Prototype</li></h1>
+    <p>JavaScript is a prototype based language, so, whenever we create a function using JavaScript, JavaScript engine adds a prototype property inside a function, Prototype property is basically an object (also known as Prototype object), where we can attach methods and properties in a prototype object, which enables all the other objects to inherit these methods and properties.</p>
+ <h1><li>Prototype Chain</li></h1>
+ <p>JavaScript objects are dynamic "bags" of properties (referred to as own properties). JavaScript objects have a link to a prototype object. When trying to access a property of an object, the property will not only be sought on the object but on the prototype of the object, the prototype of the prototype, and so on until either a property with a matching name is found or the end of the prototype chain is reached.</p>
+
+  <h1><li>Example of async & Await</li></h1>
+  <pre>const taskOne=()=>{
+    return new Promise((resolve,reject)=>{
+     resolve ("task 1 is completed");
+    });
+}
+const taskTwo=()=>{
+ return new Promise((resolve,reject)=>{
+  resolve ("task 2 is completed");
+ });
+}
+const taskThree=()=>{
+ return new Promise((resolve,reject)=>{
+  resolve ("task 3 is completed");
+ });
+}
+//Async & Await
+
+async function callAllTask(){
+ const t1=await taskOne();
+ console.log(t1);
+ const t2=await taskTwo();
+ console.log(t2);
+ const t3=await taskThree();
+ console.log(t3);
+}
+callAllTask();</pre>  
+
+<h1><li>Purpose of Async and await keyword</li></h1>
+<p>Async: It simply allows us to write promises based code as if it was synchronous and it checks that we are not breaking the execution thread. It operates asynchronously via the event-loop. Async functions will always return a value. It makes sure that a promise is returned and if it is not returned then JavaScript automatically wraps it in a promise which is resolved with its value.<br></p>
+<p>Await: Await function is used to wait for the promise. It could be used within the async block only. It makes the code wait until the promise returns a result. It only makes the async block wait.</p>
+</ol>
+</body>
+</html>
