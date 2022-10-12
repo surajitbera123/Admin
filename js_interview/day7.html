@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-6</title>
+    <style>
+        body{
+            background-color: aqua;
+            font-size: 1.2rem;
+        }
+        h3{
+            color: red;
+            background-color: white;
+        }
+        i{
+            opacity: 0.7;
+            font-size: 1rem;
+        }
+        .btn{
+            color: white;
+            background-color:magenta;
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px black;
+            cursor: pointer;
+        }
+        .clock{
+            font-size: 2rem;
+            padding: 23px;
+            text-align: center;
+            color:red;
+            
+        }
+        .clock span{
+            font-weight: bold;
+        }
+        .myStyle{
+            color:red;
+            font-size: 3.0rem;
+            background-color: yellow;
+        }pre{
+           color:black;
+        }#heading{
+            background-color: aliceblue;
+            text-align: center;
+            color: red;
+            font-size: 30px;
+            margin-left: 30%;
+        }
+       
+        
+    </style>
+
+</head>
+<body>
+    <strong id="heading">JS interview Preparation (Day-6)</strong>
+    <h3>1. Create a button , on click of which new Heading tag h1 should be added with text as "MERN stack" on the screen above button.</h3>
+    <div id="q1"></div>
+    <button class="btn">Click Me</button>
+
+    <h3>2. Write code to get 1st H1 element from a webpage using DOM.</h3>
+    <h1>I love my India</h1>
+    <h1>It is October</h1>
+    <h1>Today is Sunday</h1>
+    <h1>I am one of my parent</h1>
+    <b class="bold"></b>
+
+    <h2></h2>
+
+
+    
+    <h3>3. Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second.</h3>
+    <div class="clock">
+        <span id="HH"></span>:     
+        <span id="MM"></span>:     
+        <span id="SS"></span>
+        <span id="period"></span>
+    </div>
+    
+    <h3>4. Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy".</h3>
+    <div id="q4">Hello World</div>
+    <button class="btn">Replace Text</button>
+   
+    <h3>5. Create an HTML page having content as Hello world and a button named "Hide Text." When user will click on this button hide the "Hello World" text.</h3>
+    <div id="q5">Hello World</div>
+    <button class="btn">Hide Text</button>
+    
+    <h3>6. Given an array of 0's and 1's find out number of 0's.</h3>
+    <pre>let arr = [0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0]
+let zeroCount = 0;
+for(let i of arr){
+    if(i == 0){
+        zeroCount++;
+    }
+}
+console.log("The no. of zero's are " + zeroCount);</pre>
+
+   
+    <h3>7. Given an array find out total no. of odd and even nos.</h3>
+    <pre>let arr2 = [12, 41, 54, 22, 67, 9, 11, 23, 40]
+        let countOdd = 0, countEven = 0;
+        for(let i of arr2){
+            if((i&2) == 0){
+                countEven++;
+            }
+            else{
+                 countOdd++;
+            }
+        }
+    console.log("Even count is " + countEven + " and odd count is " + countOdd)</pre>
+   
+    <h3>8. Given a string find out number of vowels.</h3>
+   <pre>
+    let str = "Elevation Academy";
+let str2 = str.toLowerCase();
+let countVowel = 0;
+for(let i of str2){
+    if(i == 'a'){
+        countVowel++;
+    }
+    else if(i == 'e'){
+        countVowel++
+    }
+    else if(i == 'i'){
+        countVowel++
+    }
+    else if(i == 'o'){
+        countVowel++
+    }
+    else if(i == 'u'){
+        countVowel++
+    }
+}
+console.log("The no. of vowels are " + countVowel);
+   </pre>
+   
+    <h3>9. Write a code to create two objects with 2 properties each, one will be string and other will be an array. Create a function to check if all the elements of the arrays in both the objects are same.</h3>
+<pre>
+    let obj1 = {
+        name: "surajit",
+        arr: [1, 8, 5, 7, 4, 9]
+    }
+    
+    let obj2 = {
+        name: "bera",
+        arr2: [1, 8, 5, 7, 4, 9]
+    }
+    
+    let result = true;
+    let check = function(){
+        let len;
+        if(obj1.arr.length > obj2.arr2.length){
+            len = obj1.arr.length;
+        }
+        else{
+            len = obj2.arr2.length;
+        }
+        for(let i = 0; i < len; i++){
+            if(obj1.arr[i] == obj2.arr2[i]){
+                result = true;
+            }
+            else{
+                result = false;
+                break;
+            }
+        }
+        return result;
+    }
+    check();
+    if(result == true){
+        console.log("Arrays are same")
+    }
+    else{
+        console.log("Arrays are not same")
+    }
+</pre>
+    <script>
+        let btn = document.getElementsByTagName("button")[0]
+    btn.addEventListener(
+    "click", ()=>{
+        let div = document.getElementById("q1");
+        let h1 = document.createElement("h1");
+        h1.innerText = "MERN stack";
+        div.appendChild(h1);
+    }
+);
+
+var b=document.querySelector(".bold"); 
+var data=document.querySelectorAll("h1")[0];
+  b.innerHTML="The First h1 element is:- "+data.innerHTML;
+  b.classList.add("myStyle");
+
+//q2
+let firstH1 = document.getElementsByTagName("h1")[0];
+
+//q3
+function getTime(){
+    let date = new Date();
+    let HH = date.getHours();
+    let MM = date.getMinutes();
+    let SS = date.getSeconds();
+
+    let period="AM";
+    if(HH>=12)
+    period="PM";
+    if(HH>12){
+        HH=HH%12;
+    }
+    if(HH<10)
+    HH='0'+HH;
+    if(MM<10)
+    MM='0'+MM;
+    if(SS<10)
+    SS='0'+SS;
+    
+    document.getElementById("HH").innerText = HH;
+    document.getElementById("MM").innerText = MM;
+    document.getElementById("SS").innerText = SS;
+    document.getElementById("period").innerText = period;
+   
+}
+setInterval(getTime, 1000);
+
+//q4
+let btn2 = document.getElementsByTagName("button")[1]
+btn2.addEventListener(
+    "click", ()=>{
+        let div = document.getElementById("q4");
+        if(div.innerText == "Hello World"){
+            div.innerText = "Welcome to Elevation academy"
+        }
+        else{
+            div.innerText = "Hello World"
+        }
+    }
+);
+
+//q5
+let btn3 = document.getElementsByTagName("button")[2]
+btn3.addEventListener(
+    "click", ()=>{
+        let div = document.getElementById("q5");
+        div.style.visibility = "hidden";
+    }
+);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
